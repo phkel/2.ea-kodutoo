@@ -4,6 +4,8 @@ Mängu eesmärk on võimalikult kiiresti ekraanile tekkivaid sõnu ära trükkid
 
 ### Tähtpäev 26.03.2018 23:59
 
+Autorid: Krislyn Luks, Kertu Kipper
+
 ## Nõuded
 
 1. Töö tuleb teha vähemalt kahekesi, eelnevalt kokkuleppel on lubatud ka kolm liiget. GitHub'is peab eristuma, kes mida tegi!
