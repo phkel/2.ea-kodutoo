@@ -4,7 +4,9 @@ Mängu eesmärk on võimalikult kiiresti ekraanile tekkivaid sõnu ära trükkid
 
 ### Tähtpäev 26.03.2018 23:59
 
-Autorid: Krislyn Luks, Kertu Kipper
+Autorid: Krislyn Luks
+
+Kertu Kipper
 
 ## Nõuded
 
