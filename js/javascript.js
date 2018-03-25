@@ -164,8 +164,19 @@ MainApp.routes = {
   },
   'score-view': {
     'render': function () {
+      addEntry()
       console.log('>>>> Score')
       document.querySelector('.endScore').innerHTML = typer.guessedWords
+
+      const entries = JSON.parse(localStorage.getItem('allEntries'))
+      const sortedEntries = entries.sort(function (a, b) {
+        return b.score - a.score
+      })
+
+      const leaderboard = document.querySelector('.leaderboard')
+      for (let entry of sortedEntries) {
+        leaderboard.insertAdjacentHTML('beforeend', `<li>${entry.user} - ${entry.score}</li>`)
+      }
     }
   }
 }
@@ -203,7 +214,6 @@ function autosave () {
 
   if (timer) { clearTimeout(timer) }
   timer = window.setTimeout(function () {
-    // TODO check if really changed
     saveLocal()
     console.log('autosave')
   }, doneTypingInterval)
@@ -211,16 +221,26 @@ function autosave () {
 
 function saveLocal () {
   console.log(window.app)
-  const o = {
-    text: document.querySelector('#textInput').value,
-    date: new Date()
-  }
-  localStorage.setItem('textInput', JSON.stringify(o))
 
   history.pushState(null, null, '#game-view')
   window.app.routeChange()
   document.querySelector('#game-view').style.display = 'block'
   document.querySelector('#home-view').style.display = 'none'
+}
+
+function addEntry () {
+  // Parse any JSON previously stored in allEntries
+  let existingEntries = JSON.parse(localStorage.getItem('allEntries'))
+  if (existingEntries == null) existingEntries = []
+
+  const entry = {
+    user: document.querySelector('#textInput').value,
+    score: typer.guessedWords
+  }
+  localStorage.setItem('entry', JSON.stringify(entry))
+  // Save allEntries back to local storage
+  existingEntries.push(entry)
+  localStorage.setItem('allEntries', JSON.stringify(existingEntries))
 }
 
 // kui leht laetud käivitan app'i
