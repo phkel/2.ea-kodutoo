@@ -27,7 +27,8 @@ main {
   width: 100%;
 }
 
-#game-view {
+#game-view,
+#score-view {
   display: none;
 }
 

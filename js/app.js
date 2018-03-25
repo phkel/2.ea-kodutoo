@@ -57,6 +57,7 @@ TYPER.prototype = {
     this.word.Draw()
 
     window.addEventListener('keypress', this.keyPressed.bind(this))
+    console.log('nüüd?')
   },
 
   generateWord: function () {
@@ -123,7 +124,7 @@ function structureArrayByWordLength (words) {
   return tempArray
 }
 
-window.addEventListener('load', function (event) {
-  const typer = new TYPER()
-  window.typer = typer
-})
+// window.addEventListener('load', function (event) {
+//   const typer = new TYPER()
+//   window.typer = typer
+// })
