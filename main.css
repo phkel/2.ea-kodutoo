@@ -6,13 +6,16 @@
 /*  */
 
 body,
-html,
-canvas {
+html {
   width: 100%;
   height: 100%;
   position: relative;
   background-color: #D48872;
   text-align: center;
+}
+
+canvas {
+  background-color: transparent;
 }
 
 main {
@@ -53,4 +56,8 @@ main {
   top: 20px;
   left: 20px;
   position: fixed;
+}
+
+.leaderboard {
+  list-style-position: inside;
 }

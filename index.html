@@ -3,20 +3,19 @@
   <head>
     <meta charset="UTF-8">
     <title>LT Game</title>
-    <script src="js/javascript.js" charset="utf-8"></script>
-    <!-- <script src="js/app.js" charset="utf-8"></script> -->
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="javascript.js" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
   </head>
   <body>
     <main role="main">
+      <input type="button" class="goDark">
+      <!-- button for the dark mode(krislyn) -->
   
       <!-- Game page -->
       <section id="game-view">
         <h1>Game</h1>
         <p>Welcome to game page</p>
         <canvas></canvas>
-        <input type="button" class="goDark">
-        <!-- button for the dark mode(krislyn) -->
         <div class="currentScore"></div>
       </section>
 
@@ -24,17 +23,19 @@
       <section id="score-view">
         <h1>Score</h1>
         <p>Welcome to score page</p>
-        <div class="endScore"></div>
-        <ol class="leaderboard">
-          
-        </ol>
+        <div>
+          <p>Your score: </p>
+          <div class="endScore"></div>
+        </div>
+        <ol class="leaderboard"></ol>
+        <a href="index.html">Play again</a>
       </section>
   
       <!-- Home -->
       <section id="home-view">
         <h1>Home</h1>
-        <p>Welcome to letter typing game</p>
-        <input type="text" name="textInput" id="textInput" cols="30" rows="3" placeholder="sinu nimi">
+        <p>Welcome to letter typing game.<br>Game purpose is to type the most amount of words in 10 seconds.<br>You can start whenever you are ready.</p>
+        <input type="text" name="textInput" id="textInput" cols="30" rows="3" placeholder="Your name">
         <button id="saveLocal">Start Game</button>
       </section>
     
