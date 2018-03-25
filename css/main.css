@@ -14,6 +14,7 @@ canvas {
   background-color: #D48872;
   text-align: center;
 }
+
 main {
   position: absolute;
   top: 0;
@@ -26,19 +27,29 @@ main {
   width: 100%;
 }
 
+#game-view {
+  display: none;
+}
+
 .goDark {
-    background-color: #7E8889;
-    border: none;
-    color: white;
-    width: 3%;
-    height: 0;
-    padding-bottom: 3%;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 13px;
-    position:fixed;
-    top: 20px;
-    right: 20px;
+  background-color: #7E8889;
+  border: none;
+  color: white;
+  width: 3%;
+  height: 0;
+  padding-bottom: 3%;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  position:fixed;
+  top: 20px;
+  right: 20px;
 }
 
 .goDark {border-radius: 100%;}
+
+.currentScore {
+  top: 20px;
+  left: 20px;
+  position: fixed;
+}

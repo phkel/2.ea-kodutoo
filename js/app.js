@@ -72,12 +72,19 @@ TYPER.prototype = {
       this.word.removeFirstLetter()
       if (this.word.left.length === 0) {
         this.guessedWords += 1
+        this.getScore()
 
         this.generateWord()
       }
       this.word.Draw()
     }
+  },
+
+  getScore: function () {
+    console.log(this.guessedWords)
+    document.querySelector('.currentScore').innerHTML = this.guessedWords
   }
+
 }
 
 /* WORD */
