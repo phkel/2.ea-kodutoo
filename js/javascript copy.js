@@ -15,9 +15,6 @@ MainApp.routes = {
     'render': function () {
       console.log('>>>> Home')
 
-      const localValue = localStorage.getItem('textInput')
-      if (localValue) document.querySelector('#textInput').value = JSON.parse(localValue).text
-
       document
         .querySelector('#saveLocal')
         .addEventListener('click', saveLocal)
@@ -28,6 +25,9 @@ MainApp.routes = {
   'game-view': {
     'render': function () {
       console.log('>>>> Game')
+
+      const localValue = localStorage.getItem('textInput')
+      if (localValue) document.querySelector('#textInput').value = JSON.parse(localValue).text
     }
   }
 }
@@ -61,6 +61,7 @@ MainApp.prototype = {
     document.querySelector('.active-menu').className = document.querySelector('.active-menu').className.replace('active-menu', '')
     document.querySelector('.' + this.currentRoute).className += ' active-menu'
   }
+
 }
 
 /* MAIN */
@@ -69,6 +70,7 @@ let timer // GLOBAL
 
 function autosave () {
   // after typing init autosave
+
   const doneTypingInterval = 2500
 
   if (timer) { clearTimeout(timer) }
@@ -82,20 +84,14 @@ function autosave () {
 function saveLocal () {
   console.log(window.app)
   const o = {
-    text: document.querySelector('#textInput').value,
+    text: window.app.input.value,
     date: new Date()
   }
   localStorage.setItem('textInput', JSON.stringify(o))
-
-  history.pushState(null, null, '#game-view')
-  // window.app.routeChange()
-  document.querySelector('#game-view').style.display = 'block'
-  document.querySelector('#home-view').style.display = 'none'
 }
 
 // kui leht laetud käivitan app'i
-window.addEventListener('load', function (event) {
-  console.log('tere')
+window.onload = function () {
   const app = new MainApp()
   window.app = app
-})
+}

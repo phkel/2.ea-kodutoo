@@ -116,7 +116,7 @@ function structureArrayByWordLength (words) {
   return tempArray
 }
 
-window.onload = function () {
+window.addEventListener('load', function (event) {
   const typer = new TYPER()
   window.typer = typer
-}
+})
