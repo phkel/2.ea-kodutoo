@@ -9,23 +9,8 @@ if (typeof(Storage) !== "undefined") {
 }
 
 
-// button for dark mode (krislyn)
+// button function for dark mode (krislyn)
 
-
-.button {
-    background-color: pink;
-    border: none;
-    color: white;
-    width: 3%;
-    height: 0;
-    padding-bottom: 3%;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 13px;
-    position:fixed;
-    bottom:0;
-
+function chBackcolor(color) {
+   document.body.style.background = color;
 }
-
-.button{border-radius: 100%;}
