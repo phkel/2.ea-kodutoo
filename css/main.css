@@ -13,3 +13,22 @@ html, body, canvas {
 canvas {
   position: absolute;
 }
+
+
+.button {
+    background-color: #7E8889;
+    border: none;
+    color: white;
+    width: 3%;
+    height: 0;
+    padding-bottom: 3%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    position:fixed;
+    bottom:0;
+
+}
+
+.button{border-radius: 100%;}
