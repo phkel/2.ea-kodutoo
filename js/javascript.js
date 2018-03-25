@@ -99,3 +99,9 @@ window.addEventListener('load', function (event) {
   const app = new MainApp()
   window.app = app
 })
+
+// button function for dark mode (krislyn)
+
+function chBackcolor (color) {
+  document.body.style.background = color
+}
