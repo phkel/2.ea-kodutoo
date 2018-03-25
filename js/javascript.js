@@ -95,13 +95,15 @@ function saveLocal () {
 
 // kui leht laetud käivitan app'i
 window.addEventListener('load', function (event) {
-  console.log('tere')
   const app = new MainApp()
   window.app = app
+
+  document.querySelector('.goDark').addEventListener('click', function () {
+    chBackcolor('#142638')
+  })
 })
 
 // button function for dark mode (krislyn)
-
 function chBackcolor (color) {
   document.body.style.background = color
 }

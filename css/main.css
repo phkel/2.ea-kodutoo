@@ -94,20 +94,19 @@ main {
   border: 2px solid rgb(95,75,139);
 }
 
-.button {
+.goDark {
     background-color: #7E8889;
     border: none;
     color: white;
     width: 3%;
     height: 0;
     padding-bottom: 3%;
-    text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 13px;
     position:fixed;
-    bottom:0;
-
+    top: 20px;
+    right: 20px;
 }
 
-.button{border-radius: 100%;}
+.goDark {border-radius: 100%;}
