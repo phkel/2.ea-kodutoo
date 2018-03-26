@@ -258,8 +258,8 @@ window.addEventListener('load', function (event) {
 })
 
 // button function for dark mode (krislyn)
-function chBackcolor (color) {
-  document.body.style.background = color
+function chBackcolor(color) {
+   document.body.style.background = "#142638";
 }
 
 //text changes color when dark mode (krislyn)
