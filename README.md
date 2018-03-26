@@ -6,6 +6,9 @@ Mängu eesmärk on võimalikult kiiresti ekraanile tekkivaid sõnu ära trükkid
 
 Autorid: Krislyn Luks ja Kertu Kipper
 
+Skeemid: 
+![game-view](game-view.png)
+
 Skoori moodustamine: Skoor moodustub ajalimiidiga. Mängijal on 10sekundit aega, et sõnu sisestada ja kogub punkte iga sõna pealt. Lisa funktsionaalsusega saab muuta mänguleht tumedale taustale heleda kirjaga. 
 
 ## Nõuded
