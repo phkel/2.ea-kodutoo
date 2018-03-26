@@ -12,6 +12,7 @@ html {
   position: relative;
   background-color: #D48872;
   text-align: center;
+  color: rgb(71, 68, 68);
 }
 
 canvas {
