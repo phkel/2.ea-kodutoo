@@ -282,3 +282,23 @@ function changeStyle () {
     status = 1
   }
 }
+// obviously too pointless, but score dark mode separately
+status = 1;
+function changeStyleScore() {
+//Note the lowercase first letter.
+x = document.getElementById("score-view")
+
+if(status==1) {
+    x.style.color = 'white';
+    status = 2;
+}
+else if(status==2) {
+    x.style.color = 'black';
+    status = 3;
+}
+else if(status==3) {
+    x.style.color = 'white';
+    status = 1;
+}
+
+}
