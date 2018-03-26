@@ -79,7 +79,6 @@ TYPER.prototype = {
   },
 
   getScore: function () {
-    console.log(this.guessedWords)
     document.querySelector('.currentScore').innerHTML = this.guessedWords
   }
 
@@ -152,7 +151,7 @@ MainApp.routes = {
       console.log('>>>> Game')
       typer.start()
 
-      const time = 5000
+      const time = 10000
 
       if (timer) { clearTimeout(timer) }
       timer = window.setTimeout(function () {
@@ -216,7 +215,6 @@ function autosave () {
   if (timer) { clearTimeout(timer) }
   timer = window.setTimeout(function () {
     saveLocal()
-    console.log('autosave')
   }, doneTypingInterval)
 }
 

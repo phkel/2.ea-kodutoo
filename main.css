@@ -78,11 +78,9 @@ h1 {
 }
 
 .currentScore {
-  top: 20px;
-  left: 20px;
-  position: fixed;
+  text-align: center;
   font-size: 2.8em;
-  text-shadow: 1px 1px 10px black;
+  text-shadow: 1px 1px 5px rgb(138, 138, 138);
 }
 
 /* Score-view */
@@ -95,11 +93,13 @@ h1 {
   font-weight: bold;
   font-size: 2.6em;
   margin-bottom: 80px;
+  text-shadow: 1px 1px 5px rgb(138, 138, 138);
 }
 
 .gameLeaderboard {
   font-size: 1.8em;
   text-decoration: underline;
+  margin-bottom: -5px;
 }
 
 .leaderboard {
@@ -112,7 +112,8 @@ h1 {
 a {
   font-size: 2em;
   text-decoration: none;
-  color: rgb(85, 43, 43);
+  color: rgb(112, 39, 39);
+  text-shadow: 0.8px 0.8px 10px rgb(54, 19, 19);
 }
 
 a:hover {
