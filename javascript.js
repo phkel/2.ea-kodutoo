@@ -261,3 +261,24 @@ window.addEventListener('load', function (event) {
 function chBackcolor (color) {
   document.body.style.background = color
 }
+
+//text changes color when dark mode (krislyn)
+status = 1;
+function changeStyle() {
+
+x = document.getElementById("home-view")
+
+if(status==1) {
+    x.style.color = 'white';
+    status = 2;
+}
+else if(status==2) {
+    x.style.color = 'black';
+    status = 3;
+}
+else if(status==3) {
+    x.style.color = 'white';
+    status = 1;
+}
+
+}
