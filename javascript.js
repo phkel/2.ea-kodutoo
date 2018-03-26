@@ -255,30 +255,30 @@ window.addEventListener('load', function (event) {
   document.querySelector('.goDark').addEventListener('click', function () {
     chBackcolor('#142638')
   })
+
+  document.querySelector('.goDark').addEventListener('click', function () {
+    changeStyle()
+  })
 })
 
 // button function for dark mode (krislyn)
-function chBackcolor(color) {
-   document.body.style.background = "#142638";
+function chBackcolor (color) {
+  document.body.style.background = '#142638'
 }
 
-//text changes color when dark mode (krislyn)
-status = 1;
-function changeStyle() {
+// text changes color when dark mode (krislyn)
+let status = 1
+function changeStyle () {
+  let x = document.getElementById('home-view')
 
-x = document.getElementById("home-view")
-
-if(status==1) {
-    x.style.color = 'white';
-    status = 2;
-}
-else if(status==2) {
-    x.style.color = 'black';
-    status = 3;
-}
-else if(status==3) {
-    x.style.color = 'white';
-    status = 1;
-}
-
+  if (status === 1) {
+    x.style.color = 'white'
+    status = 2
+  } else if (status === 2) {
+    x.style.color = 'black'
+    status = 3
+  } else if (status === 3) {
+    x.style.color = 'white'
+    status = 1
+  }
 }
