@@ -1,3 +1,5 @@
+/* global typer */
+
 /* TYPER */
 const TYPER = function () {
   if (TYPER.instance_) {
