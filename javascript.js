@@ -255,14 +255,6 @@ window.addEventListener('load', function (event) {
   document.querySelector('.goDark').addEventListener('click', function () {
     chBackcolor()
   })
-
-  // document.querySelector('.goDark').addEventListener('click', function () {
-  //   changeStyle()
-  // })
-
-  // document.querySelector('.goDark').addEventListener('click', function () {
-  //   changeStyleScore()
-  // })
 })
 
 // button function for dark mode (krislyn)
@@ -271,36 +263,19 @@ function chBackcolor (color) {
   document.body.style.color = '#ffffff'
 }
 
-// // text changes color when dark mode (krislyn)
-// let status = 1
-// function changeStyle () {
-//   let x = document.getElementById('home-view')
+// text changes color when dark mode (krislyn)
+let status = 1
+function changeStyle () {
+  let x = document.getElementById('home-view')
 
-//   if (status === 1) {
-//     x.style.color = 'white'
-//     status = 2
-//   } else if (status === 2) {
-//     x.style.color = 'black'
-//     status = 3
-//   } else if (status === 3) {
-//     x.style.color = 'white'
-//     status = 1
-//   }
-// }
-// // obviously too pointless, but score dark mode separately
-// let status1 = 1
-// function changeStyleScore () {
-// // Note the lowercase first letter.
-//   let x = document.getElementById('score-view')
-
-//   if (status1 === 1) {
-//     x.style.color = 'white'
-//     status1 = 2
-//   } else if (status1 === 2) {
-//     x.style.color = 'black'
-//     status1 = 3
-//   } else if (status1 === 3) {
-//     x.style.color = 'white'
-//     status1 = 1
-//   }
-// }
+  if (status === 1) {
+    x.style.color = 'white'
+    status = 2
+  } else if (status === 2) {
+    x.style.color = 'black'
+    status = 3
+  } else if (status === 3) {
+    x.style.color = 'white'
+    status = 1
+  }
+}
