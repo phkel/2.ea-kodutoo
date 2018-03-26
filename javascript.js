@@ -28,8 +28,8 @@ TYPER.prototype = {
     this.canvas.style.width = this.WIDTH + 'px'
     this.canvas.style.height = this.HEIGHT + 'px'
 
-    this.canvas.width = this.WIDTH * 2
-    this.canvas.height = this.HEIGHT * 2
+    this.canvas.width = this.WIDTH * 1.8
+    this.canvas.height = this.HEIGHT * 1.8
 
     this.loadWords()
   },
@@ -98,7 +98,7 @@ Word.prototype = {
     this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
 
     this.ctx.textAlign = 'center'
-    this.ctx.font = '140px Courier'
+    this.ctx.font = '140px Optima'
     this.ctx.fillText(this.left, this.canvas.width / 2, this.canvas.height / 2)
   },
 
@@ -151,6 +151,7 @@ MainApp.routes = {
     'render': function () {
       console.log('>>>> Game')
       typer.start()
+
       const time = 5000
 
       if (timer) { clearTimeout(timer) }
