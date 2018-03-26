@@ -28,8 +28,8 @@ TYPER.prototype = {
     this.canvas.style.width = this.WIDTH + 'px'
     this.canvas.style.height = this.HEIGHT + 'px'
 
-    this.canvas.width = this.WIDTH * 1.8
-    this.canvas.height = this.HEIGHT * 1.8
+    this.canvas.width = this.WIDTH * 2
+    this.canvas.height = this.HEIGHT * 2
 
     this.loadWords()
   },
@@ -98,6 +98,7 @@ Word.prototype = {
 
     this.ctx.textAlign = 'center'
     this.ctx.font = '140px Optima'
+    this.ctx.fillStyle = 'rgb(41, 40, 40)'
     this.ctx.fillText(this.left, this.canvas.width / 2, this.canvas.height / 2)
   },
 
@@ -207,16 +208,6 @@ MainApp.prototype = {
 /* MAIN */
 
 let timer // GLOBAL
-
-function autosave () {
-  // after typing init autosave
-  const doneTypingInterval = 2500
-
-  if (timer) { clearTimeout(timer) }
-  timer = window.setTimeout(function () {
-    saveLocal()
-  }, doneTypingInterval)
-}
 
 function saveLocal () {
   console.log(window.app)

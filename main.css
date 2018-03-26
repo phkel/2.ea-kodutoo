@@ -15,6 +15,10 @@ html {
 
 canvas {
   background-color: transparent;
+  position: fixed;
+  top: 80px;
+  left: 0px;
+  color: rgb(41, 40, 40);
 }
 
 main {
